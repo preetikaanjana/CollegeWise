@@ -1,0 +1,47 @@
+[
+  {
+    "college_name":"Birla Institute of Technology & Science -Pilani",
+    "state":"National",
+    "ownership":"Government",
+    "actual_median_lpa":14.0,
+    "predicted_median_lpa":12.4,
+    "residual":1.6,
+    "absolute_error":1.6
+  },
+  {
+    "college_name":"North Eastern Hill University",
+    "state":"Meghalaya",
+    "ownership":"Government",
+    "actual_median_lpa":3.8,
+    "predicted_median_lpa":4.76,
+    "residual":-0.96,
+    "absolute_error":0.96
+  },
+  {
+    "college_name":"University of Kashmir",
+    "state":"National",
+    "ownership":"Government",
+    "actual_median_lpa":8.0,
+    "predicted_median_lpa":7.08,
+    "residual":0.92,
+    "absolute_error":0.92
+  },
+  {
+    "college_name":"Koneru Lakshmaiah Education Foundation University (K L College of Engineering)",
+    "state":"National",
+    "ownership":"Government",
+    "actual_median_lpa":4.35,
+    "predicted_median_lpa":5.22,
+    "residual":-0.87,
+    "absolute_error":0.87
+  },
+  {
+    "college_name":"Dr. D. Y. Patil Vidyapeeth",
+    "state":"Maharashtra",
+    "ownership":"Private",
+    "actual_median_lpa":2.4,
+    "predicted_median_lpa":3.22,
+    "residual":-0.82,
+    "absolute_error":0.82
+  }
+]

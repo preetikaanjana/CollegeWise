@@ -1,0 +1,154 @@
+{
+  "target_variable": "median_package_lpa",
+  "sample_size": 109,
+  "features_used": [
+    "total_approved_intake",
+    "tuition_fee_annual",
+    "faculty_count",
+    "student_faculty_ratio",
+    "academic_score",
+    "infrastructure_score",
+    "location_score",
+    "student_life_score",
+    "is_government"
+  ],
+  "champion_model": "Gradient Boosting",
+  "empirical_prediction_interval_lpa": 4.82,
+  "models": {
+    "Dummy Baseline (Mean)": {
+      "CV_R2_Mean": -0.1189,
+      "CV_R2_Std": 0.2292,
+      "CV_MAE_Mean": 4.4312,
+      "CV_MAE_Std": 0.6825,
+      "CV_RMSE_Mean": 5.6786,
+      "CV_RMSE_Std": 1.473,
+      "Val_MAE": 5.8937,
+      "Val_RMSE": 7.2845,
+      "Val_R2": -0.012,
+      "Test_MAE": 5.83,
+      "Test_RMSE": 6.5476,
+      "Test_R2": -0.0211
+    },
+    "Linear Regression": {
+      "CV_R2_Mean": 0.1298,
+      "CV_R2_Std": 0.3635,
+      "CV_MAE_Mean": 3.6004,
+      "CV_MAE_Std": 0.7969,
+      "CV_RMSE_Mean": 4.9594,
+      "CV_RMSE_Std": 1.774,
+      "Val_MAE": 4.3684,
+      "Val_RMSE": 5.574,
+      "Val_R2": 0.4075,
+      "Test_MAE": 3.9777,
+      "Test_RMSE": 4.7154,
+      "Test_R2": 0.4704
+    },
+    "Ridge Regression (alpha=10.0)": {
+      "CV_R2_Mean": 0.2483,
+      "CV_R2_Std": 0.2633,
+      "CV_MAE_Mean": 3.4045,
+      "CV_MAE_Std": 0.6767,
+      "CV_RMSE_Mean": 4.65,
+      "CV_RMSE_Std": 1.6526,
+      "Val_MAE": 4.4207,
+      "Val_RMSE": 5.6124,
+      "Val_R2": 0.3993,
+      "Test_MAE": 4.2153,
+      "Test_RMSE": 4.9914,
+      "Test_R2": 0.4066
+    },
+    "Decision Tree (max_depth=5)": {
+      "CV_R2_Mean": -0.3076,
+      "CV_R2_Std": 1.0749,
+      "CV_MAE_Mean": 3.8995,
+      "CV_MAE_Std": 0.7935,
+      "CV_RMSE_Mean": 5.6191,
+      "CV_RMSE_Std": 1.7344,
+      "Val_MAE": 4.0862,
+      "Val_RMSE": 5.9585,
+      "Val_R2": 0.3229,
+      "Test_MAE": 2.9187,
+      "Test_RMSE": 4.035,
+      "Test_R2": 0.6122
+    },
+    "Random Forest (n=150)": {
+      "CV_R2_Mean": 0.4366,
+      "CV_R2_Std": 0.2648,
+      "CV_MAE_Mean": 2.9506,
+      "CV_MAE_Std": 0.7491,
+      "CV_RMSE_Mean": 3.9702,
+      "CV_RMSE_Std": 1.4706,
+      "Val_MAE": 4.0027,
+      "Val_RMSE": 5.8623,
+      "Val_R2": 0.3446,
+      "Test_MAE": 3.2441,
+      "Test_RMSE": 3.9412,
+      "Test_R2": 0.63
+    },
+    "Gradient Boosting": {
+      "CV_R2_Mean": 0.3739,
+      "CV_R2_Std": 0.3662,
+      "CV_MAE_Mean": 2.9517,
+      "CV_MAE_Std": 0.6477,
+      "CV_RMSE_Mean": 4.0783,
+      "CV_RMSE_Std": 1.2777,
+      "Val_MAE": 3.8302,
+      "Val_RMSE": 5.3916,
+      "Val_R2": 0.4456,
+      "Test_MAE": 3.2178,
+      "Test_RMSE": 3.878,
+      "Test_R2": 0.6418
+    },
+    "XGBoost Regressor": {
+      "CV_R2_Mean": 0.3876,
+      "CV_R2_Std": 0.3343,
+      "CV_MAE_Mean": 2.9356,
+      "CV_MAE_Std": 0.5978,
+      "CV_RMSE_Mean": 4.0573,
+      "CV_RMSE_Std": 1.161,
+      "Val_MAE": 4.4754,
+      "Val_RMSE": 5.839,
+      "Val_R2": 0.3498,
+      "Test_MAE": 3.1047,
+      "Test_RMSE": 3.9453,
+      "Test_R2": 0.6293
+    }
+  },
+  "feature_importances": {
+    "total_approved_intake": 0.1112,
+    "tuition_fee_annual": 0.0839,
+    "faculty_count": 0.1284,
+    "student_faculty_ratio": 0.2721,
+    "academic_score": 0.0115,
+    "infrastructure_score": 0.1013,
+    "location_score": 0.2075,
+    "student_life_score": 0.0838,
+    "is_government": 0.0003
+  },
+  "classification_audit": {
+    "classification_target": "median_package >= 7.0 LPA (Tier 1 Premium)",
+    "positive_class_count": 9,
+    "negative_class_count": 8,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        8,
+        0
+      ],
+      [
+        0,
+        9
+      ]
+    ],
+    "note": "Regression remains the primary headline ML result. Classification accuracy is subject to class imbalance."
+  },
+  "data_split": {
+    "train": 75,
+    "val": 17,
+    "test": 17
+  }
+}
