@@ -3,8 +3,13 @@ CollegeWise — Personalized ML-Based College Decision Support System
 A modern, Pinterest-aesthetic decision-support platform for students in India.
 """
 
+import sys
 import os
 import json
+
+# Ensure project root is in sys.path for cloud deployment
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import numpy as np
 import pandas as pd
 import plotly.express as px
