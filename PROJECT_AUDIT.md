@@ -128,7 +128,7 @@ This document details every finding across all 11 evaluation dimensions and defi
 | **Error Analysis** | No residual analysis or worst-prediction inspection. | Build `src/models/error_analysis.py` with residual plots and outlier diagnosis. |
 | **Explainability** | Only tree-based Gini importance reported. | Add Permutation Importance and clear disclaimers that importance \(\ne\) causation. |
 | **UI** | No interactive sensitivity analysis tool. | Add interactive Scenario A vs Scenario B sensitivity comparator. |
-| **Documentation** | Metrics in docs reflected distorted 6.50 LPA data. | Re-run full pipeline and update `README.md`, `METHODOLOGY.md`, `MODEL_CARD.md`, and `INTERVIEW_NOTES.md` with true numbers. |
+| **Documentation** | Metrics in docs reflected distorted 6.50 LPA data. | Re-run full pipeline and update `README.md`, `METHODOLOGY.md`, and `MODEL_CARD.md` with true numbers. |
 
 ## 7. Final Remediation Status & Verification (Completed September 17, 2026)
 

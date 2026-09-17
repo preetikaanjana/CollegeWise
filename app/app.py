@@ -347,7 +347,7 @@ with st.sidebar:
                 data=f_pdf.read(),
                 file_name="CollegeWise_System_Architecture_and_Interview_Defense.pdf",
                 mime="application/pdf",
-                help="Download the complete technical architecture and interview defense handbook.",
+                help="Download the complete technical architecture and system handbook.",
                 use_container_width=True
             )
     

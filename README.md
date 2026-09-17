@@ -32,7 +32,6 @@
 18. [Tech Stack](#18-tech-stack)
 19. [Limitations](#19-limitations)
 20. [How to Run](#20-how-to-run)
-21. [Interview Explanation](#21-interview-explanation)
 
 ---
 
@@ -337,7 +336,7 @@ The technologies used across CollegeWise are strictly categorized as follows:
 
 ## 19. Limitations
 
-To maintain scientific integrity and interview defensibility, the following limitations are explicitly recognized:
+To maintain scientific integrity and system transparency, the following limitations are explicitly recognized:
 1. **Sample Size Disparity**: The verified supervised-learning cohort is smaller because only institutions with sufficiently complete and verified placement disclosures were eligible for model training.
 2. **Prediction Uncertainty**: Institutional compensation predictions carry estimated uncertainty bounds (±2.0 to ±3.0 LPA). These are estimated uncertainty bounds based on data-coverage tiers and are not statistically calibrated confidence intervals.
 3. **Public Data Inconsistencies**: Government disclosures across different reporting years can exhibit reporting variations and incomplete optional fields.
@@ -382,11 +381,3 @@ streamlit run app/app.py
 ```
 Open your browser at `http://localhost:8501`.
 
----
-
-## 21. Interview Explanation
-
-When presenting CollegeWise in an ML / software engineering interview, explain the system in three key points:
-1. **The Core Problem & Architecture**: "College selection is fundamentally a multi-criteria decision problem, not a single monolithic ranking. I built CollegeWise as an end-to-end decision-support platform that decouples continuous ML regression for institutional package estimation from Multi-Criteria Decision Analysis (SAW) for personalized college ranking."
-2. **Data Hygiene & ML Pipeline**: "I enforced strict anti-leakage controls by excluding placement-derived features from predictors. On the 17-institution holdout test set of verified NIRF disclosures, our Gradient Boosting model achieved an R² of 0.6418 and MAE of 3.22 LPA—a 44.8% error reduction over the Dummy Baseline. We report estimated prediction uncertainty bounds based on data-coverage tiers rather than claiming false precision."
-3. **Engineering Integrity**: "We avoided synthetic data fabrication, evaluated 7 model architectures with 5x5 repeated cross-validation, implemented a dynamic 100-point budget slider, and backed the system with a 20-test automated test suite."
