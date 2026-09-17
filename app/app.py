@@ -338,8 +338,19 @@ with st.sidebar:
         <div style="margin-top: 4px;">⚖️ <b>Strict 100%</b> Points Constraint</div>
     </div>
     """, unsafe_allow_html=True)
+
+    pdf_doc_path = os.path.join(os.path.dirname(__file__), "..", "CollegeWise_Comprehensive_System_Architecture_and_Interview_Defense.pdf")
+    if os.path.exists(pdf_doc_path):
+        with open(pdf_doc_path, "rb") as f_pdf:
+            st.download_button(
+                label="📥 Download System Handbook (PDF)",
+                data=f_pdf.read(),
+                file_name="CollegeWise_System_Architecture_and_Interview_Defense.pdf",
+                mime="application/pdf",
+                help="Download the complete technical architecture and interview defense handbook.",
+                use_container_width=True
+            )
     
-    st.markdown("<br>", unsafe_allow_html=True)
     st.caption("CollegeWise © 2026 • AICTE & NIRF Audit Provenance")
 
 
